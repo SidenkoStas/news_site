@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список новостей</title>
+</head>
+<body>
+
+<h1>Список новостей:</h1>
+
+{% for i in news %}
+<div>
+    <p>{{i.title}}</p>
+    <p>{{i.content}}</p>
+    <p>{{i.created_at|date:"Y-m-d H:m"}}</p>
+</div>
+<hr>
+{% endfor %}
+
+</body>
+</html>
