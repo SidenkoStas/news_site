@@ -10,7 +10,7 @@
 
 {% block content %}
 
-{% for i in news %}
+{% for i in object_list %}
 <div class="card mb-3">
   <div class="card-header">
     <a href="{{ i.category.get_absolute_url }}">Категория: {{ i.category }}</a>
@@ -24,7 +24,7 @@
       {% endif %}
       <div class="media-body">
         <h5 class="card-title">{{ i.title }}</h5>
-        <p class="card-text">{{ i.content|truncatewords:50 | safe }}</p>
+        <p class="card-text">{{ i.content|truncatewords:50 }}</p>
         <a href="{{ i.get_absolute_url }}" class="btn btn-primary">Read more...</a>
       </div>
     </div>
